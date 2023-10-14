@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-=#%tp5_5pzlk(2q@$l3_og2&1r9tg3hpf*klq@b^ky67nuc4!d
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "polls-app-env.eba-fpmazvp6.us-east-1.elasticbeanstalk.com",
+    "polls-travis-env.eba-tcdirzrj.us-east-1.elasticbeanstalk.com",
     "127.0.0.1",
 ]
 
