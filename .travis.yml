@@ -1,7 +1,8 @@
 language: python
 os: linux
+dist: jammy
 python:
-  - "3.8"
+  - "3.11"
 script:
   - black --check .
   - flake8 --max-line-length=100 .
@@ -10,3 +11,11 @@ install:
   - pip install -r requirements.txt
 after_success:
   - python -m coveralls
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $ACCESS_KEY_ID
+  secret_access_key: $SECRET_ACCESS_KEY
+  region: "us-east-1"
+  app: "polls-assignment"
+  env: "polls-travis-env"
+  bucket_name: "elasticbeanstalk-us-east-1-106966609221"
