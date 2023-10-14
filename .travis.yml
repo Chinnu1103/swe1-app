@@ -5,7 +5,7 @@ python:
 # command to install dependencies
 script:
   - black --check .
-  - flake8 --exclude=migrations .
+  - flake8 --max-line-length=100 .
   - coverage run --source=mysite,polls manage.py test
 install:
   - pip install -r requirements.txt
