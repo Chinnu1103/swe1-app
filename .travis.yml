@@ -2,7 +2,7 @@ language: python
 dist: bionic
 os: linux
 python:
-  - "3.11.2"
+  - "3.11"
 script:
   - black --check .
   - flake8 --max-line-length=100 .
