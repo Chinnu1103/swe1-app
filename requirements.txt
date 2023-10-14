@@ -1,8 +1,8 @@
-Django==4.2.4
-asgiref
-sqlparse
-pytest
-coverage
+asgiref==3.7.2
+Django==3.2.22
+sqlparse==0.4.4
+pytest==5.4.1
+coverage==6.4.2
 flake8
 black
 coveralls
