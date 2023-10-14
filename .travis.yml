@@ -1,10 +1,11 @@
 language: python
-    python:
-      - "3.10"
-      - "3.11"
-    env:
-      -DJANGO=4.2.4
-    install:
-      - pip install -r requirements.txt
-    script:
-      - python manage.py test
+os: linux
+python:
+  - "3.8"
+# command to install dependencies
+script:
+  - black --check .
+  - flake8 --exclude=migrations .
+  - coverage run --source=mysite,polls manage.py test
+install:
+  - pip install -r requirements.txt
