@@ -19,3 +19,5 @@ deploy:
   app: "polls-assignment"
   env: "polls-travis-env"
   bucket_name: "elasticbeanstalk-us-east-1-106966609221"
+  on:
+    branch: master
