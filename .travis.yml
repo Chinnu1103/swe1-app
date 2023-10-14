@@ -9,3 +9,5 @@ script:
   - coverage run --source=mysite,polls manage.py test
 install:
   - pip install -r requirements.txt
+after_success:
+  - python -m coveralls
